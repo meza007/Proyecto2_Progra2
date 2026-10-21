@@ -1,0 +1,13 @@
+codigo,tipo,nombre,capacidad,precioHora
+E001,CanchaFutbol,Cancha Futbol 5 Norte,10,25000.00
+E002,CanchaFutbol,Cancha Futbol 7 Sur,14,35000.00
+E003,CanchaFutbol,Cancha Futbol 11 Principal,22,60000.00
+E004,CanchaBaloncesto,Cancha Baloncesto Techada,10,20000.00
+E005,CanchaBaloncesto,Cancha Baloncesto Exterior,10,15000.00
+E006,CanchaTenis,Cancha Tenis Arcilla,4,18000.00
+E007,CanchaTenis,Cancha Tenis Dura,4,16000.00
+E008,Piscina,Piscina Olimpica,40,30000.00
+E009,Piscina,Piscina Recreativa,25,22000.00
+E010,SalaFuncional,Sala Funcional A,15,12000.00
+E011,SalaFuncional,Sala Funcional B,20,14000.00
+E012,SalaFuncional,Sala Crossfit,12,13000.00
