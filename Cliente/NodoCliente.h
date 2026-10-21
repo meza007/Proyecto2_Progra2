@@ -1,11 +1,8 @@
 #ifndef NODOCLIENTE_H
 #define NODOCLIENTE_H
-
+#include "Cliente/Cliente.h"
 #include <iostream>
 using namespace std;
-
-#include "Cliente/Cliente.h"
-
 
 class NodoCliente {
 private:

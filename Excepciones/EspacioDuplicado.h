@@ -1,13 +1,9 @@
 #ifndef ESPACIODUPLICADO_H
 #define ESPACIODUPLICADO_H
-
+#include "Excepciones/ExcepcionCentroDeportivo.h"
 #include <iostream>
 using namespace std;
 
-#include "Excepciones/ExcepcionCentroDeportivo.h"
-
-
-// Se lanza al registrar un espacio con un codigo repetido.
 class EspacioDuplicado : public ExcepcionCentroDeportivo {
 public:
     EspacioDuplicado(string codigo);

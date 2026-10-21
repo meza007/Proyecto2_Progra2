@@ -1,8 +1,8 @@
 #include "Cliente/NodoCliente.h"
 
 NodoCliente::NodoCliente() {
-    Clie = NULL;
-    Sig = NULL;
+    Clie = nullptr;
+    Sig = nullptr;
 }
 
 NodoCliente::NodoCliente(Cliente *clie, NodoCliente *sig) {

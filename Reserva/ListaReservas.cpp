@@ -1,7 +1,7 @@
 #include "Reserva/ListaReservas.h"
 
 ListaReservas::ListaReservas() {
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 
@@ -10,14 +10,14 @@ ListaReservas::~ListaReservas() {
 }
 
 void ListaReservas::IngresaReserva(Reserva *res) {
-    NodoReserva *nuevo = new NodoReserva(res, NULL);
+    NodoReserva *nuevo = new NodoReserva(res, nullptr);
     Cantidad++;
-    if (Primero == NULL) {
+    if (Primero == nullptr) {
         Primero = nuevo;
         return;
     }
     NodoReserva *actual = Primero;
-    while (actual->getSiguiente() != NULL) {
+    while (actual->getSiguiente() != nullptr) {
         actual = actual->getSiguiente();
     }
     actual->setSiguiente(nuevo);
@@ -25,13 +25,13 @@ void ListaReservas::IngresaReserva(Reserva *res) {
 
 Reserva* ListaReservas::buscarPorCodigo(string codigo) {
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getReserva()->getCodigo() == codigo) {
             return actual->getReserva();
         }
         actual = actual->getSiguiente();
     }
-    return NULL;
+    return nullptr;
 }
 
 int ListaReservas::getCantidad() {
@@ -41,7 +41,7 @@ int ListaReservas::getCantidad() {
 int ListaReservas::contarActivas() {
     int total = 0;
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getReserva()->estaActiva()) {
             total++;
         }
@@ -53,7 +53,7 @@ int ListaReservas::contarActivas() {
 int ListaReservas::contarPorCliente(string idCliente) {
     int total = 0;
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getReserva()->getIdCliente() == idCliente) {
             total++;
         }
@@ -65,7 +65,7 @@ int ListaReservas::contarPorCliente(string idCliente) {
 int ListaReservas::contarPorEspacio(string codigoEspacio) {
     int total = 0;
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getReserva()->getCodigoEspacio() == codigoEspacio) {
             total++;
         }
@@ -76,7 +76,7 @@ int ListaReservas::contarPorEspacio(string codigoEspacio) {
 
 bool ListaReservas::tieneActivaEnEspacio(string codigoEspacio) {
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         Reserva *res = actual->getReserva();
         if (res->estaActiva() && res->getCodigoEspacio() == codigoEspacio) {
             return true;
@@ -88,13 +88,13 @@ bool ListaReservas::tieneActivaEnEspacio(string codigoEspacio) {
 
 void ListaReservas::vaciar() {
     NodoReserva *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         NodoReserva *siguiente = actual->getSiguiente();
         delete actual->getReserva();
         delete actual;
         actual = siguiente;
     }
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 

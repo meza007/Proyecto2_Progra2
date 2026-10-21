@@ -4,10 +4,6 @@
 #include <iostream>
 using namespace std;
 
-
-// Representa a un cliente del centro deportivo. Solo guarda sus datos;
-// las validaciones de negocio las hace la fachada y la interaccion con el
-// usuario la hace Menu.
 class Cliente {
 private:
     string Id;

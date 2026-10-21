@@ -1,8 +1,8 @@
 #include "Espacio/NodoEspacio.h"
 
 NodoEspacio::NodoEspacio() {
-    Esp = NULL;
-    Sig = NULL;
+    Esp = nullptr;
+    Sig = nullptr;
 }
 
 NodoEspacio::NodoEspacio(EspacioDeportivo *esp, NodoEspacio *sig) {

@@ -6,12 +6,6 @@ using namespace std;
 
 #include "Sistema/AdministradorSistema.h"
 
-
-// Patron Facade: punto de entrada unico para las operaciones del sistema.
-// Menu solo habla con la fachada; la fachada coordina el administrador
-// (Singleton), las listas, las fabricas de espacios y los archivos, valida
-// las reglas de negocio y lanza excepciones propias cuando algo falla.
-// Para mostrar colecciones entrega iteradores, nunca los nodos.
 class FachadaCentroDeportivo {
 private:
     AdministradorSistema *Admin;

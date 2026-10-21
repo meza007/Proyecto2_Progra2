@@ -1,8 +1,8 @@
 #include "Reserva/NodoReserva.h"
 
 NodoReserva::NodoReserva() {
-    Res = NULL;
-    Sig = NULL;
+    Res = nullptr;
+    Sig = nullptr;
 }
 
 NodoReserva::NodoReserva(Reserva *res, NodoReserva *sig) {

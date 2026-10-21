@@ -1,30 +1,19 @@
 #ifndef MENU_H
 #define MENU_H
-
+#include "Sistema/FachadaCentroDeportivo.h"
 #include <iostream>
 using namespace std;
 
-#include "Sistema/FachadaCentroDeportivo.h"
-
-
-// Unica clase que interactua con el usuario: muestra los menus, lee las
-// entradas y presenta resultados y errores. Toda operacion se delega en la
-// fachada, y las colecciones se recorren solo mediante iteradores.
-// La presentacion usa secuencias ANSI de color y marcos con caracteres ASCII
-// (+, -, |, =) para que se vea bien en cualquier consola de Windows.
 class Menu {
 private:
     FachadaCentroDeportivo Fachada;
 
-    // Ancho de los marcos de titulos y menus.
     static const int ANCHO_MARCO = 60;
 
-    // Anchos de las columnas de cada tabla.
     static const int ANCHOS_CLIENTES[4];
     static const int ANCHOS_ESPACIOS[6];
     static const int ANCHOS_RESERVAS[8];
 
-    // Colores ANSI
     const char* colorTitulo();
     const char* colorNumero();
     const char* colorTexto();
@@ -35,7 +24,6 @@ private:
     const char* colorReset();
     void activarColoresConsola();
 
-    // Elementos de presentacion
     void mostrarBienvenida();
     void mostrarTitulo(string titulo);
     void mostrarOpcion(int numero, string texto);
@@ -49,7 +37,6 @@ private:
     void lineaCentrada(string texto, const char *color);
     void pausar();
 
-    // Tablas
     string recortar(string texto, int ancho);
     string formatoMonto(double monto);
     void lineaTabla(const int anchos[], int columnas);
@@ -62,7 +49,6 @@ private:
     void encabezadoReservas();
     void filaReserva(Reserva *reserva);
 
-    // Lectura de datos
     string leerTexto(string mensaje);
     int leerEntero(string mensaje);
     double leerDouble(string mensaje);

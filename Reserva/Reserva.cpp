@@ -63,9 +63,6 @@ double Reserva::duracionHoras() {
     return (minutosDelDia(HoraFin) - minutosDelDia(HoraInicio)) / 60.0;
 }
 
-// Dos rangos [inicio, fin) del mismo dia se traslapan si cada uno empieza
-// antes de que termine el otro. Una reserva que termina a las 18:00 no
-// choca con otra que empieza a las 18:00.
 bool Reserva::seTraslapaCon(string fecha, string horaInicio, string horaFin) {
     if (fecha != Fecha) {
         return false;

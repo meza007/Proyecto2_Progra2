@@ -1,11 +1,8 @@
 #ifndef NODORESERVA_H
 #define NODORESERVA_H
-
+#include "Reserva/Reserva.h"
 #include <iostream>
 using namespace std;
-
-#include "Reserva/Reserva.h"
-
 
 class NodoReserva {
 private:

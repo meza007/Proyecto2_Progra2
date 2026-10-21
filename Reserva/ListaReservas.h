@@ -1,16 +1,10 @@
 #ifndef LISTARESERVAS_H
 #define LISTARESERVAS_H
-
+#include "Reserva/NodoReserva.h"
+#include "Reserva/IteradorReservas.h"
 #include <iostream>
 using namespace std;
 
-#include "Reserva/NodoReserva.h"
-#include "Reserva/IteradorReservas.h"
-
-
-// Lista enlazada simple de reservas. Es duena de las Reserva que contiene
-// y los libera en el destructor. Los nodos no se exponen: para recorrerla
-// se usa el iterador (patron Iterator).
 class ListaReservas {
 private:
     NodoReserva *Primero;

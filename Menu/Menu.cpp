@@ -3,7 +3,6 @@
 #define NOMINMAX
 #include <windows.h>
 #endif
-
 #include "Menu/Menu.h"
 #include "Excepciones/ExcepcionCentroDeportivo.h"
 #include <cstdlib>

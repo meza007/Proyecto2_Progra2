@@ -5,12 +5,12 @@ IteradorClientes::IteradorClientes(NodoCliente *primero) {
 }
 
 bool IteradorClientes::hayMas() {
-    return Actual != NULL;
+    return Actual != nullptr;
 }
 
 Cliente* IteradorClientes::siguiente() {
-    if (Actual == NULL) {
-        return NULL;
+    if (Actual == nullptr) {
+        return nullptr;
     }
     Cliente *clie = Actual->getCliente();
     Actual = Actual->getSiguiente();

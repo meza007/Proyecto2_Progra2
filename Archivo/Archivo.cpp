@@ -33,7 +33,7 @@ int Archivo::cargarClientes(ListaClientes *lista, string nombreArchivo) {
     }
     int cargados = 0;
     string linea;
-    getline(archivo, linea); // encabezado
+    getline(archivo, linea);
     while (getline(archivo, linea)) {
         linea = quitarFinDeLinea(linea);
         if (linea.empty()) {
@@ -44,7 +44,7 @@ int Archivo::cargarClientes(ListaClientes *lista, string nombreArchivo) {
         string telefono = siguienteCampo(linea);
         string correo = siguienteCampo(linea);
 
-        if (id.empty() || nombre.empty() || lista->buscarPorId(id) != NULL) {
+        if (id.empty() || nombre.empty() || lista->buscarPorId(id) != nullptr) {
             continue;
         }
         lista->IngresaCliente(new Cliente(id, nombre, telefono, correo));
@@ -88,10 +88,10 @@ int Archivo::cargarEspacios(ListaEspacios *lista, string nombreArchivo) {
         int capacidad = atoi(siguienteCampo(linea).c_str());
         double precioHora = atof(siguienteCampo(linea).c_str());
 
-        if (lista->buscarPorCodigo(codigo) != NULL) {
+        if (lista->buscarPorCodigo(codigo) != nullptr) {
             continue;
         }
-        FabricaEspacio *fabrica = NULL;
+        FabricaEspacio *fabrica = nullptr;
         try {
             fabrica = FabricaEspacio::obtenerFabrica(tipo);
             lista->IngresaEspacio(fabrica->fabricar(codigo, nombre, capacidad, precioHora));
@@ -141,7 +141,7 @@ int Archivo::cargarReservas(ListaReservas *lista, string nombreArchivo) {
         string horaFin = siguienteCampo(linea);
         string estado = siguienteCampo(linea);
 
-        if (codigo.empty() || lista->buscarPorCodigo(codigo) != NULL) {
+        if (codigo.empty() || lista->buscarPorCodigo(codigo) != nullptr) {
             continue;
         }
         if (!Reserva::fechaValida(fecha) || !Reserva::horaValida(horaInicio)

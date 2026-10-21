@@ -1,10 +1,9 @@
 #ifndef ITERADORCLIENTES_H
 #define ITERADORCLIENTES_H
-
+#include "Cliente/NodoCliente.h"
 #include <iostream>
 using namespace std;
 
-#include "Cliente/NodoCliente.h"
 
 class IteradorClientes {
 private:

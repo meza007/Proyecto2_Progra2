@@ -5,12 +5,12 @@ IteradorEspacios::IteradorEspacios(NodoEspacio *primero) {
 }
 
 bool IteradorEspacios::hayMas() {
-    return Actual != NULL;
+    return Actual != nullptr;
 }
 
 EspacioDeportivo* IteradorEspacios::siguiente() {
-    if (Actual == NULL) {
-        return NULL;
+    if (Actual == nullptr) {
+        return nullptr;
     }
     EspacioDeportivo *esp = Actual->getEspacio();
     Actual = Actual->getSiguiente();

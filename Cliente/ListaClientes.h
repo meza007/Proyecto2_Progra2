@@ -1,11 +1,9 @@
 #ifndef LISTACLIENTES_H
 #define LISTACLIENTES_H
-
-#include <iostream>
-using namespace std;
-
 #include "Cliente/NodoCliente.h"
 #include "Cliente/IteradorClientes.h"
+#include <iostream>
+using namespace std;
 
 class ListaClientes {
 private:

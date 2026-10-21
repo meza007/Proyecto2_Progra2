@@ -1,12 +1,10 @@
 #ifndef ARCHIVO_H
 #define ARCHIVO_H
-
-#include <iostream>
-using namespace std;
-
 #include "Cliente/ListaClientes.h"
 #include "Espacio/ListaEspacios.h"
 #include "Reserva/ListaReservas.h"
+#include <iostream>
+using namespace std;
 
 class Archivo {
 public:

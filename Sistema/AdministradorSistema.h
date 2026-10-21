@@ -8,12 +8,6 @@ using namespace std;
 #include "Espacio/ListaEspacios.h"
 #include "Reserva/ListaReservas.h"
 
-
-// Patron Singleton: administrador principal del sistema. Es dueno de las
-// tres listas y conoce las rutas de los archivos de datos. El constructor es
-// privado y la copia esta prohibida, de modo que la unica forma de obtenerlo
-// es obtenerInstancia(), que siempre devuelve el mismo objeto. Asi todo el
-// programa trabaja sobre los mismos datos sin usar variables globales.
 class AdministradorSistema {
 private:
     ListaClientes *Clientes;

@@ -1,7 +1,7 @@
 #include "Espacio/ListaEspacios.h"
 
 ListaEspacios::ListaEspacios() {
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 
@@ -10,14 +10,14 @@ ListaEspacios::~ListaEspacios() {
 }
 
 void ListaEspacios::IngresaEspacio(EspacioDeportivo *esp) {
-    NodoEspacio *nuevo = new NodoEspacio(esp, NULL);
+    NodoEspacio *nuevo = new NodoEspacio(esp, nullptr);
     Cantidad++;
-    if (Primero == NULL) {
+    if (Primero == nullptr) {
         Primero = nuevo;
         return;
     }
     NodoEspacio *actual = Primero;
-    while (actual->getSiguiente() != NULL) {
+    while (actual->getSiguiente() != nullptr) {
         actual = actual->getSiguiente();
     }
     actual->setSiguiente(nuevo);
@@ -25,13 +25,13 @@ void ListaEspacios::IngresaEspacio(EspacioDeportivo *esp) {
 
 EspacioDeportivo* ListaEspacios::buscarPorCodigo(string codigo) {
     NodoEspacio *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getEspacio()->getCodigo() == codigo) {
             return actual->getEspacio();
         }
         actual = actual->getSiguiente();
     }
-    return NULL;
+    return nullptr;
 }
 
 int ListaEspacios::getCantidad() {
@@ -40,13 +40,13 @@ int ListaEspacios::getCantidad() {
 
 void ListaEspacios::vaciar() {
     NodoEspacio *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         NodoEspacio *siguiente = actual->getSiguiente();
         delete actual->getEspacio();
         delete actual;
         actual = siguiente;
     }
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 

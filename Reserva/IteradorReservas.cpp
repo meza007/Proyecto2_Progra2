@@ -1,16 +1,15 @@
 #include "Reserva/IteradorReservas.h"
-
 IteradorReservas::IteradorReservas(NodoReserva *primero) {
     Actual = primero;
 }
 
 bool IteradorReservas::hayMas() {
-    return Actual != NULL;
+    return Actual != nullptr;
 }
 
 Reserva* IteradorReservas::siguiente() {
-    if (Actual == NULL) {
-        return NULL;
+    if (Actual == nullptr) {
+        return nullptr;
     }
     Reserva *res = Actual->getReserva();
     Actual = Actual->getSiguiente();

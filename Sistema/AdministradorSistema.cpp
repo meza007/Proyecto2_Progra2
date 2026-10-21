@@ -1,9 +1,6 @@
 #include "Sistema/AdministradorSistema.h"
 #include "Archivo/Archivo.h"
 
-// Las rutas son relativas a la carpeta desde donde se ejecuta el programa.
-// CMake copia datos/ junto al ejecutable, asi funcionan tanto desde CLion
-// (carpeta del build) como por consola desde la raiz del proyecto.
 AdministradorSistema::AdministradorSistema() {
     Clientes = new ListaClientes();
     Espacios = new ListaEspacios();
@@ -19,8 +16,6 @@ AdministradorSistema::~AdministradorSistema() {
     delete Reservas;
 }
 
-// La instancia es una variable estatica local: se crea la primera vez que
-// se llama a este metodo y se destruye automaticamente al terminar main.
 AdministradorSistema* AdministradorSistema::obtenerInstancia() {
     static AdministradorSistema instancia;
     return &instancia;

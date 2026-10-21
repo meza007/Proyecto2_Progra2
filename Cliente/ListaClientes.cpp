@@ -1,7 +1,7 @@
 #include "Cliente/ListaClientes.h"
 
 ListaClientes::ListaClientes() {
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 
@@ -10,14 +10,14 @@ ListaClientes::~ListaClientes() {
 }
 
 void ListaClientes::IngresaCliente(Cliente *clie) {
-    NodoCliente *nuevo = new NodoCliente(clie, NULL);
+    NodoCliente *nuevo = new NodoCliente(clie, nullptr);
     Cantidad++;
-    if (Primero == NULL) {
+    if (Primero == nullptr) {
         Primero = nuevo;
         return;
     }
     NodoCliente *actual = Primero;
-    while (actual->getSiguiente() != NULL) {
+    while (actual->getSiguiente() != nullptr) {
         actual = actual->getSiguiente();
     }
     actual->setSiguiente(nuevo);
@@ -25,13 +25,13 @@ void ListaClientes::IngresaCliente(Cliente *clie) {
 
 Cliente* ListaClientes::buscarPorId(string id) {
     NodoCliente *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         if (actual->getCliente()->getId() == id) {
             return actual->getCliente();
         }
         actual = actual->getSiguiente();
     }
-    return NULL;
+    return nullptr;
 }
 
 int ListaClientes::getCantidad() {
@@ -40,13 +40,13 @@ int ListaClientes::getCantidad() {
 
 void ListaClientes::vaciar() {
     NodoCliente *actual = Primero;
-    while (actual != NULL) {
+    while (actual != nullptr) {
         NodoCliente *siguiente = actual->getSiguiente();
         delete actual->getCliente();
         delete actual;
         actual = siguiente;
     }
-    Primero = NULL;
+    Primero = nullptr;
     Cantidad = 0;
 }
 
